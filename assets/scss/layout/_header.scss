@@ -6,28 +6,26 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    .logo {
-      width: 80px;
-      height: 49px;
+  }
+  .logo {
+    width: 80px;
+    height: 49px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-right: 64px;
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    gap: 64px;
+    p{
       padding-top: 12px;
       padding-bottom: 12px;
-      margin-right: 64px;
-    }
-    ul {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: end;
-      gap: 64px;
-      li {
-        p{
-          padding-top: 12px;
-          padding-bottom: 12px;
-          color: #FFF;
-          &:hover {
-            padding-bottom: 9px;
-            border-bottom: 3px solid #FFF;
-          }
-        }
+      color: #FFF;
+      &:hover {
+        padding-bottom: 9px;
+        border-bottom: 3px solid #FFF;
       }
     }
   }
@@ -40,23 +38,23 @@
       display: block;
       margin-left: 0;
       margin-right: 0;
-      .logo {
-        margin-left: 14px;
-        margin-right: 14px;
-      }
-      ul {
-        gap: 0;
-        li {
-          width: 50%;
-          text-align: center;
-          p{
-            border: 1px solid #FFF;
-            &:hover {
-              padding-bottom: 12px;
-              border-bottom: 0;
-            }
-          }
-        }
+    }
+    .logo {
+      margin-left: 14px;
+      margin-right: 14px;
+    }
+    ul {
+      gap: 0;
+    }
+    li {
+      width: 50%;
+      text-align: center;
+    }
+    p{
+      border: 1px solid #FFF;
+      &:hover {
+        padding-bottom: 12px;
+        border-bottom: 0;
       }
     }
   }

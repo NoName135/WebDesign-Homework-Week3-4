@@ -12,20 +12,20 @@
     margin-top: 32px;
     display: flex;
     align-items: center;
-    .branch_label {
-      font-size: 24px;
-      line-height: 36px;
-      white-space: nowrap;
-    }
-    .branch_selection {
-      margin-left: 16px;
-      width: 304px;
-      font-size: 18px;
-      line-height: 26px;
-      padding: 6px 0 5px 10px;
-      border: 1px solid #CED4DA;
-      color: rgba($color: #495057, $alpha: 0.75)
-    }
+  }
+  .branch_label {
+    font-size: 24px;
+    line-height: 36px;
+    white-space: nowrap;
+  }
+  .branch_selection {
+    margin-left: 16px;
+    width: 304px;
+    font-size: 18px;
+    line-height: 26px;
+    padding: 6px 0 5px 10px;
+    border: 1px solid #CED4DA;
+    color: rgba($color: #495057, $alpha: 0.75)
   }
   main {
     margin-top: 40px;
@@ -42,35 +42,35 @@
         object-fit: cover;
         object-position: center center;
       }
-      .card-text {
-        h3 {
-          font-size: 24px;
-          line-height: 36px;
-          padding: 8px 24px;
-          border: 1px solid #00000020;
-        }
-        .card-body {
-          padding: 16px 24px;
-          display: flex;
-          border: 1px solid #00000020;
-          .icon {
-            display: flex;
-            flex-direction: column;
-            margin-top: 6px;
-            span {
-              font-size: 20px;
-              margin-bottom: 18px;
-            }
-          }
-          .content {
-            font-size: 20px;
-            line-height: 30px;
-            margin-left: 12px;
-            p {
-              margin-bottom: 8px;
-            }
-          }
-        }
+    }
+    .card-text {
+      h3 {
+        font-size: 24px;
+        line-height: 36px;
+        padding: 8px 24px;
+        border: 1px solid #00000020;
+      }
+    }
+    .card-body {
+      padding: 16px 24px;
+      display: flex;
+      border: 1px solid #00000020;
+    }
+    .icon {
+      display: flex;
+      flex-direction: column;
+      margin-top: 6px;
+      span {
+        font-size: 20px;
+        margin-bottom: 18px;
+      }
+    }
+    .content {
+      font-size: 20px;
+      line-height: 30px;
+      margin-left: 12px;
+      p {
+        margin-bottom: 8px;
       }
     }
     .map {
@@ -93,14 +93,14 @@
           width: calc(50% - 12px);
           height: 100%;
         }
-        .card-text {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-          .card-body {
-            flex-grow: 1;
-          }
-        }
+      }
+      .card-text {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      .card-body {
+        flex-grow: 1;
       }
       .map {
         height: 414px;
@@ -116,11 +116,9 @@
       font-size: 24px;
       line-height: 36px;
     }
-    .branch_field {
-      .branch_label {
-        font-size: 16px;
-        line-height: 24px;
-      }
+    .branch_label {
+      font-size: 16px;
+      line-height: 24px;
     }
     main {
       margin-top: 24px;
@@ -139,22 +137,16 @@
 @media (max-width: 374px) {
   .store {
     main {
-      .card {
-        .card-text {
-          .card-body {
-            .icon {
-              margin-top: 6px;
-              span {
-                font-size: 16px;
-                margin-bottom: 16px;
-              }
-            }
-            .content {
-              font-size: 16px;
-              line-height: 24px;
-            }
-          }
+      .icon {
+        margin-top: 6px;
+        span {
+          font-size: 16px;
+          margin-bottom: 16px;
         }
+      }
+      .content {
+        font-size: 16px;
+        line-height: 24px;
       }
       .map {
         max-width: calc(100vw - 28px);

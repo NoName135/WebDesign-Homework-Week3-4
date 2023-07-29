@@ -3,62 +3,62 @@ footer {
   color: #FFF;
   .container {
     padding: 48px 0;
-    .main {
+  }
+  .main {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #FFF;
+    padding-bottom: 32px;
+  }
+  .content {
+    font-family: $text-primary;
+    ul {
       display: flex;
-      justify-content: space-between;
-      border-bottom: 1px solid #FFF;
-      padding-bottom: 32px;
-      .content {
-        font-family: $text-primary;
-        ul {
-          display: flex;
-          margin-bottom: 36px;
-          li {
-            margin-right: 48px;
-            a {
-              color: #FFF;
-              line-height: 24px;
-            }
-          }
-        }
-        .contact {
-          display: flex;
-          align-items: center;
-          margin-bottom: 8px;
-          span, a {
-            color: #FFF;
-            font-size: 36px;
-            line-height: 54px;
-          }
-          .material-symbols-outlined {
-            margin-right: 20px;
-          }
-        }
-      }
-      .logo {
-        ul {
-          display: flex;
-        }
-        img {
-          width: 48px;
-          margin-left: 32px;
+      margin-bottom: 36px;
+      li {
+        margin-right: 48px;
+        a {
+          color: #FFF;
+          line-height: 24px;
         }
       }
     }
-    .copyright {
-      font-family: $primary;
-      margin-top: 32px;
-      line-height: 24px;
+  }
+  .contact {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    span, a {
+      color: #FFF;
+      font-size: 36px;
+      line-height: 54px;
+    }
+    .material-symbols-outlined {
+      margin-right: 20px;
+    }
+  }
+  .logo {
+    ul {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      .terms {
-        font-size: 14px;
-        line-height: 21px;
-        display: flex;
-        p {
-          margin-left: 48px;
-        }
+    }
+    img {
+      width: 48px;
+      margin-left: 32px;
+    }
+  }
+  .copyright {
+    font-family: $primary;
+    margin-top: 32px;
+    line-height: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .terms {
+      font-size: 14px;
+      line-height: 21px;
+      display: flex;
+      p {
+        margin-left: 48px;
       }
     }
   }
@@ -66,13 +66,9 @@ footer {
 
 @media(max-width: 1199px) {
   footer {
-    .container {
-      .main {
-        .content {
-          ul {
-            display: none;
-          }
-        }
+    .content {
+      ul {
+        display: none;
       }
     }
   }
@@ -82,36 +78,34 @@ footer {
   footer {
     .container {
       padding: 24px 0;
-      .main {
-        padding-bottom: 24px;
-        .content {
-          .contact {
-            span, a {
-              font-size: 16px;
-              line-height: 24px;
-            }
-            .material-symbols-outlined {
-              font-size: 18px;
-              margin-right: 8px;
-            }
-          }
-        }
-        .logo {
-          img {
-            width: 24px;
-            margin-left: 16px;
-          }
-        }
+    }
+    .main {
+      padding-bottom: 24px;
+    }
+    .contact {
+      span, a {
+        font-size: 16px;
+        line-height: 24px;
       }
-      .copyright {
-        margin-top: 16px;
+      .material-symbols-outlined {
+        font-size: 18px;
+        margin-right: 8px;
+      }
+    }
+    .logo {
+      img {
+        width: 24px;
+        margin-left: 16px;
+      }
+    }
+    .copyright {
+      margin-top: 16px;
+      display: block;
+      .terms {
         display: block;
-        .terms {
-          display: block;
-          p {
-            margin-left: 0;
-            margin-top: 8px;
-          }
+        p {
+          margin-left: 0;
+          margin-top: 8px;
         }
       }
     }
@@ -120,16 +114,14 @@ footer {
 
 @media(max-width: 374px) {
   footer {
-    .container {
-      .main {
-        display: block;
-        .logo {
-          img {
-            margin-top: 8px;
-            margin-left: 0;
-            margin-right: 24px;
-          }
-        }
+    .main {
+      display: block;
+    }
+    .logo {
+      img {
+        margin-top: 8px;
+        margin-left: 0;
+        margin-right: 24px;
       }
     }
   }

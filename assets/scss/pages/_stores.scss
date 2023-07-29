@@ -33,50 +33,50 @@
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
-    .card {
-      width: calc(33.33% - 16px);
-      color: #212529;
-      img {
-        width: 100%;
+  }
+  .card {
+    width: calc(33.33% - 16px);
+    color: #212529;
+    img {
+      width: 100%;
+    }
+    h3 {
+      font-size: 24px;
+      line-height: 36px;
+      padding: 8px 24px;
+      border: 1px solid #00000020;
+    }
+  }
+  .card-body {
+    padding: 16px 24px;
+    display: flex;
+    border: 1px solid #00000020;
+    .icon {
+      display: flex;
+      flex-direction: column;
+      margin-top: 6px;
+      span {
+        font-size: 20px;
+        margin-bottom: 18px;
       }
-      h3 {
-        font-size: 24px;
-        line-height: 36px;
-        padding: 8px 24px;
-        border: 1px solid #00000020;
+    }
+    .content {
+      font-size: 20px;
+      line-height: 30px;
+      margin-left: 12px;
+      p {
+        margin-bottom: 8px;
       }
-      .card-body {
-        padding: 16px 24px;
-        display: flex;
-        border: 1px solid #00000020;
-        .icon {
-          display: flex;
-          flex-direction: column;
-          margin-top: 6px;
-          span {
-            font-size: 20px;
-            margin-bottom: 18px;
-          }
-        }
-        .content {
-          font-size: 20px;
-          line-height: 30px;
-          margin-left: 12px;
-          p {
-            margin-bottom: 8px;
-          }
-        }
-      }
-      .card-footer {
-        background: #000;
-        text-align: center;
-        padding: 16px 0;
-        color: #FFF;
-        p {
-          font-size: 19px;
-          line-height: 27px;
-        }
-      }
+    }
+  }
+  .card-footer {
+    background: #000;
+    text-align: center;
+    padding: 16px 0;
+    color: #FFF;
+    p {
+      font-size: 19px;
+      line-height: 27px;
     }
   }
 }
@@ -86,10 +86,8 @@
     h1 {
       margin-top: 80px;
     }
-    .card-stores {
-      .card {
-        width: calc(50% - 12px);
-      }
+    .card {
+      width: calc(50% - 12px);
     }
   }
 }
@@ -101,39 +99,33 @@
       font-size: 24px;
       line-height: 36px;
     }
-    .region_field {
-      .region_label {
-        font-size: 16px;
-        line-height: 24px;
-      }
+    .region_label {
+      font-size: 16px;
+      line-height: 24px;
     }
     .card-stores {
       margin-top: 24px;
       margin-bottom: 64px;
-      .card {
-        width: 100%;
-      }
+    }
+    .card {
+      width: 100%;
     }
   }
 }
 
 @media (max-width: 374px) {
   .stores {
-    .card-stores {
-      .card {
-        .card-body {
-          .icon {
-            margin-top: 6px;
-            span {
-              font-size: 16px;
-              margin-bottom: 16px;
-            }
-          }
-          .content {
-            font-size: 16px;
-            line-height: 24px;
-          }
+    .card-body {
+      .icon {
+        margin-top: 6px;
+        span {
+          font-size: 16px;
+          margin-bottom: 16px;
         }
+      }
+      .content {
+        font-size: 16px;
+        line-height: 24px;
       }
     }
   }

@@ -1,28 +1,26 @@
 .product {
   .menu {
-    .container {
-      ul {
-        display: flex;
-        a {
-            width: 33.33%;
-            color: #000;
-          li {
-            font-size: 32px;
-            line-height: 48px;
-            font-family: $text-secondary;
-            font-weight: 500;
-            text-align: center;
-            padding: 24px 0;
-            border: 1px solid #DCDCDC;
-            &:hover {
-              background: $secondary;
-            }
-          }
-          .active {
-            padding-bottom: 16px;
-            border-bottom: 8px solid $primary;
-          }
+    ul {
+      display: flex;
+      a {
+        width: 33.33%;
+        color: #000;
+      }
+      li {
+        font-size: 32px;
+        line-height: 48px;
+        font-family: $text-secondary;
+        font-weight: 500;
+        text-align: center;
+        padding: 24px 0;
+        border: 1px solid #DCDCDC;
+        &:hover {
+          background: $secondary;
         }
+      }
+      .active {
+        padding-bottom: 16px;
+        border-bottom: 8px solid $primary;
       }
     }
     .header {
@@ -51,114 +49,70 @@
   main {
     padding-top: 80px;
     text-align: center;
-    .container {
-      h2 {
-        font-size: 42px;
-        line-height: 63px;
-        font-family: $text-secondary;
+    h2 {
+      font-size: 42px;
+      line-height: 63px;
+      font-family: $text-secondary;
+      font-weight: 500;
+    }
+    h1 {
+      font-size: 32px;
+      line-height: 48px;
+      font-family: $text-primary;
+      margin-bottom: 32px;
+    }
+    .card-optical, .card-sunglasses {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+    .card {
+      margin-bottom: 56px;
+      img {
+        width: 100%;
+      }
+    }
+    .card-body {
+      font-size: 24px;
+      line-height: 36px;
+      font-family: $text-secondary;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      p {
         font-weight: 500;
+        color: $primary
       }
-      h1 {
-        font-size: 32px;
-        line-height: 48px;
-        font-family: $text-primary;
-        margin-bottom: 32px;
+    }
+    .card-footer {
+      display: flex;
+      gap: 8px;
+      .color1 {
+        width: 24px;
+        height: 24px;
+        background: #5F3E2D;
+        border-radius: 4px;
       }
-      .card-optical, .card-sunglasses {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 24px;
-        .card {
-          margin-bottom: 56px;
-          img {
-            width: 100%;
-          }
-          .card-body {
-            font-size: 24px;
-            line-height: 36px;
-            font-family: $text-secondary;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            p {
-              font-weight: 500;
-              color: $primary
-            }
-          }
-          .card-footer {
-            display: flex;
-            gap: 8px;
-            .color1 {
-              width: 24px;
-              height: 24px;
-              background: #5F3E2D;
-              border-radius: 4px;
-            }
-            .color2 {
-              width: 24px;
-              height: 24px;
-              background: #B75929;
-              border-radius: 4px;
-            }
-          }
-        }
+      .color2 {
+        width: 24px;
+        height: 24px;
+        background: #B75929;
+        border-radius: 4px;
       }
-      .card-optical {
-        .card {
-          width: calc(25% - 18px);
-        }
-      }
-      .card-sunglasses {
-        .card {
-          width: calc(33.33% - 16px);
-        }
-      }
+    }
+  }
+  .card-optical {
+    .card {
+      width: calc(25% - 18px);
+    }
+  }
+  .card-sunglasses {
+    .card {
+      width: calc(33.33% - 16px);
     }
   }
 }
 
-.pagination {
-  margin: 80px 0;
-  ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    a.disabled {
-      pointer-events: none;
-      cursor: default;
-    }
-    li {
-      color: #555555;
-      border: 1px solid #555555;
-      padding: 12px 16px;
-      font-family: $text-secondary;
-      font-size: 18px;
-      line-height: 27px;
-      white-space: nowrap;
-      &:hover {
-        background: $secondary;
-      }
-    }
-    .prev, .next {
-      padding: 11px 12px;
-      font-size: 19px;
-      line-height: 29px;
-    }
-    .next {
-      background: #F2F2F2;
-      &:hover {
-        background: #F2F2F2;
-      }
-    }
-    .active {
-      background: #000;
-      color: #FFF;
-      &:hover {
-        background: #000;
-      }
-    }
-  }
-}
 
 @media(max-width: 1199px){
   .product {
@@ -166,17 +120,13 @@
       .container {
         margin-left: 0;
         margin-right: 0;
-        ul {
-          a {
-            li {
-              font-size: 24px;
-              line-height: 36px;
-              padding: 16px 0;
-            }
-            .active {
-              padding-bottom: 8px;
-            }
-          }
+        li {
+          font-size: 24px;
+          line-height: 36px;
+          padding: 16px 0;
+        }
+        .active {
+          padding-bottom: 8px;
         }
       }
       .header {
@@ -198,12 +148,10 @@
       }
     }
     main {
-      .container {
-        .card-optical, .card-sunglasses {
-          .card {
-            width: calc(50% - 12px);
-            margin-bottom: 16px;
-          }
+      .card-optical, .card-sunglasses {
+        .card {
+          width: calc(50% - 12px);
+          margin-bottom: 16px;
         }
       }
     }
@@ -216,49 +164,29 @@
       .container {
         margin-left: 0;
         margin-right: 0;
-        ul {
-          a {
-            li {
-              font-size: 16px;
-              line-height: 24px;
-              padding: 16px 0;
-            }
-          }
+        li {
+          font-size: 16px;
+          line-height: 24px;
+          padding: 16px 0;
         }
       }
     }
     main {
       padding-top: 40px;
-      .container {
-        h2 {
-          font-size: 24px;
-          line-height: 36px;
-        }
-        h1 {
-          font-size: 24px;
-          line-height: 36px;
-          margin-bottom: 24px;
-        }
-        .card-optical, .card-sunglasses {
-          .card {
-            width: 100%;
-            margin-bottom: 0;
-          }
-        }
+      h2 {
+        font-size: 24px;
+        line-height: 36px;
       }
-    }
-  }
-
-  .pagination {
-    margin: 64px 0;
-    ul {
-      li {
-        font-size: 16px;
-        line-height: 24px;
+      h1 {
+        font-size: 24px;
+        line-height: 36px;
+        margin-bottom: 24px;
       }
-      .prev, .next {
-        font-size: 16px;
-        line-height: 26px;
+      .card-optical, .card-sunglasses {
+        .card {
+          width: 100%;
+          margin-bottom: 0;
+        }
       }
     }
   }
@@ -269,26 +197,11 @@
 @media(max-width: 374px){
   .product {
     .menu {
-      .container {
-        ul {
-          a {
-            li {
-              font-size: 12px;
-              line-height: 20px;
-            }
-          }
+      .container{
+        li {
+          font-size: 12px;
+          line-height: 20px;
         }
-      }
-    }
-  }
-
-  .pagination {
-    ul {
-      li {
-        display: none;
-      }
-      .prev, .next {
-        display: block;
       }
     }
   }
