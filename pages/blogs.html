@@ -12,27 +12,7 @@
   </head>
   <body>
     <%- include('./layout/header'); -%>
-    <nav class="nav-blog">
-      <div class="container">
-        <ul>
-          <li>
-            <a href="#"><p>最新消息</p></a>
-          </li>
-          <li>
-            <a href="#"><p>特別企劃</p></a>
-          </li>
-          <li>
-            <a href="#"><p>新品上市</p></a>
-          </li>
-          <li>
-            <a href="#"><p>鏡框小知識</p></a>
-          </li>
-        </ul>
-        <span class="material-symbols-outlined">
-          search
-        </span>
-      </div>
-    </nav>
+    <%- include('./layout/nav-blog'); -%>
     <div class="blogs container">
       <h1>部落格</h1>
       <ul class="card-blog">
@@ -122,31 +102,7 @@
           </div>
         </li>
       </ul>
-      <div class="pagination">
-        <ul>
-          <a href="#">
-            <li class="prev">上一頁</li>
-          </a>
-          <a href="#">
-            <li>1</li>
-          </a>
-          <a href="#">
-            <li class="active">2</li>
-          </a>
-          <a href="#">
-            <li>3</li>
-          </a>
-          <a href="#">
-            <li>4</li>
-          </a>
-          <a href="#">
-            <li>5</li>
-          </a>
-          <a href="#" class="disabled">
-            <li class="next">下一頁</li>
-          </a>
-        </ul>
-      </div>
+      <%- include('./layout/pagination'); -%>
     </div>
     <%- include('./layout/footer'); -%>
     <script type="module" src="../main.js"></script>
