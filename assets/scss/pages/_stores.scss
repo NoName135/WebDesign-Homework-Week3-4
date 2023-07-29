@@ -1,0 +1,140 @@
+.stores {
+  font-family: $text-primary;
+  h1 {
+    margin-top: 96px;
+    font-size: 48px;
+    line-height: 72px;
+    font-weight: bold;
+    padding-left: 16px;
+    border-left: 8px solid $primary;
+  }
+  .region_field {
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    .region_label {
+      font-size: 24px;
+      line-height: 36px;
+      white-space: nowrap;
+    }
+    .region_selection {
+      margin-left: 16px;
+      width: 304px;
+      font-size: 18px;
+      line-height: 26px;
+      padding: 6px 0 5px 10px;
+      border: 1px solid #CED4DA;
+      color: rgba($color: #495057, $alpha: 0.75)
+    }
+  }
+  .card-stores {
+    margin-top: 40px;
+    margin-bottom: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    .card {
+      width: calc(33.33% - 16px);
+      color: #212529;
+      img {
+        width: 100%;
+      }
+      h3 {
+        font-size: 24px;
+        line-height: 36px;
+        padding: 8px 24px;
+        border: 1px solid #00000020;
+      }
+      .card-body {
+        padding: 16px 24px;
+        display: flex;
+        border: 1px solid #00000020;
+        .icon {
+          display: flex;
+          flex-direction: column;
+          margin-top: 6px;
+          span {
+            font-size: 20px;
+            margin-bottom: 18px;
+          }
+        }
+        .content {
+          font-size: 20px;
+          line-height: 30px;
+          margin-left: 12px;
+          p {
+            margin-bottom: 8px;
+          }
+        }
+      }
+      .card-footer {
+        background: #000;
+        text-align: center;
+        padding: 16px 0;
+        color: #FFF;
+        p {
+          font-size: 19px;
+          line-height: 27px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .stores {
+    h1 {
+      margin-top: 80px;
+    }
+    .card-stores {
+      .card {
+        width: calc(50% - 12px);
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .stores {
+    h1 {
+      margin-top: 40px;
+      font-size: 24px;
+      line-height: 36px;
+    }
+    .region_field {
+      .region_label {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+    .card-stores {
+      margin-top: 24px;
+      margin-bottom: 64px;
+      .card {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 374px) {
+  .stores {
+    .card-stores {
+      .card {
+        .card-body {
+          .icon {
+            margin-top: 6px;
+            span {
+              font-size: 16px;
+              margin-bottom: 16px;
+            }
+          }
+          .content {
+            font-size: 16px;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+  }
+}
