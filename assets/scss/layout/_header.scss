@@ -19,14 +19,13 @@
     flex-wrap: wrap;
     justify-content: end;
     gap: 64px;
-    p{
-      padding-top: 12px;
-      padding-bottom: 12px;
-      color: #FFF;
-      &:hover {
-        padding-bottom: 9px;
-        border-bottom: 3px solid #FFF;
-      }
+  }
+  p{
+    padding: 12px 0;
+    color: #FFF;
+    &:hover {
+      padding-bottom: 9px;
+      border-bottom: 3px solid #FFF;
     }
   }
 }
@@ -54,7 +53,7 @@
       border: 1px solid #FFF;
       &:hover {
         padding-bottom: 12px;
-        border-bottom: 0;
+        border: 1px solid #FFF;
       }
     }
   }
