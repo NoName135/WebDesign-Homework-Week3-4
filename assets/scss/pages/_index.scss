@@ -110,7 +110,6 @@
       font-weight: 900;
       font-style: italic;
       margin-top: 8px;
-      overflow-wrap: break-word;
     }
   }
 
@@ -387,6 +386,23 @@
         margin: 0 auto;
         padding-left: 14px;
         padding-right: 14px;
+      }
+    }
+  }
+}
+
+@media(max-width: 374px) {
+  .index {
+    .feature {
+      h2 {
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+    .classic {
+      h5 {
+        font-size: 36px;
+        line-height: 54px;
       }
     }
   }
