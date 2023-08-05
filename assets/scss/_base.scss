@@ -1,0 +1,28 @@
+body {
+  font-family: $text-primary;
+}
+
+a {
+	text-decoration: none;
+}
+img {
+  vertical-align: middle;
+}
+
+@mixin desktop-s{
+  @media(max-width:1199px){
+    @content;
+  }
+}
+
+@mixin pad{
+  @media(max-width:767px){
+    @content;
+  }
+}
+
+@mixin phone{
+  @media(max-width:374px){
+    @content;
+  }
+}

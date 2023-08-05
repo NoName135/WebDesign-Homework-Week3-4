@@ -4,11 +4,17 @@
     background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header.png?raw=true);
     background-position: center;
     background-size: cover;
+    @include pad {
+      height: 396px;
+    }
     .container {
       height: 787px;
       display: flex;
       justify-content: end;
       align-items: center;
+      @include pad {
+        height: 396px;
+      }
     }
     .title {
       font-family: $text-primary;
@@ -17,11 +23,19 @@
       h3 {
         font-size: 36px;
         line-height: 54px;
+        @include pad {
+          font-size: 16px;
+          line-height: 24px;
+        }
       }
       h1 {
         font-size: 64px;
         line-height: 96px;
         font-weight: bold;
+        @include pad {
+          font-size: 24px;
+          line-height: 36px;
+        }
       }
     }
     .button {
@@ -42,6 +56,9 @@
     font-family: $text-primary;
     background: $secondary;
     padding: 80px 0;
+    @include pad {
+      padding: 40px 0;
+    }
     .container {
       text-align: center;
     }
@@ -51,6 +68,14 @@
       line-height: 72px;
       font-weight: bold;
       margin-bottom: 24px;
+      @include pad {
+        font-size: 24px;
+        line-height: 36px;
+      }
+      @include phone {
+        font-size: 20px;
+        line-height: 30px;
+      }
     }
     ul {
       display: flex;
@@ -60,6 +85,12 @@
     }
     li {
       width: calc(25% - 18px);
+      @include desktop-s {
+        width: calc(50% - 18px);
+      }
+      @include pad {
+        width: 100%;
+      }
     }
     img {
       width: 83.83px;
@@ -81,6 +112,9 @@
   .classic {
     font-family: $text-secondary;
     padding: 80px 0;
+    @include pad {
+      padding: 40px 0;
+    }
     .container {
       text-align: center;
     }
@@ -90,6 +124,10 @@
       line-height: 72px;
       font-weight: bold;
       margin-bottom: 48px;
+      @include pad {
+        font-size: 24px;
+        line-height: 36px;
+      }
     }
     ul {
       display: flex;
@@ -99,6 +137,9 @@
     }
     li {
       width: calc(33.33% - 16px);
+      @include desktop-s {
+        width: 100%;
+      }
     }
     img {
       width: 100%;
@@ -110,6 +151,10 @@
       font-weight: 900;
       font-style: italic;
       margin-top: 8px;
+      @include phone {
+        font-size: 36px;
+        line-height: 54px;
+      }
     }
   }
 
@@ -119,6 +164,9 @@
     background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/index-bg.png?raw=true);
     background-position: center;
     background-size: cover;
+    @include pad {
+      padding: 40px 0;
+    }
     .container {
       text-align: center;
     }
@@ -128,14 +176,24 @@
       line-height: 72px;
       font-weight: bold;
       margin-bottom: 48px;
+      @include pad {
+        font-size: 24px;
+        line-height: 36px;
+      }
     }
     ul {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
+      @include desktop-s {
+        gap: 24px;
+      }
     }
     li {
       width: 50%;
+      @include desktop-s {
+        width: 100%;
+      }
     }
     img {
       width: 100%;
@@ -148,12 +206,19 @@
       font-weight: 900;
       font-style: italic;
       padding: 8px 0;
+      @include phone {
+        font-size: 36px;
+        line-height: 54px;
+      }
     }
   }
 
   .recommend {
     font-family: $text-primary;
     padding: 80px 0;
+    @include pad {
+      padding: 40px 0;
+    }
     .container {
       text-align: center;
     }
@@ -163,6 +228,10 @@
       line-height: 72px;
       font-weight: bold;
       margin-bottom: 48px;
+      @include pad {
+        font-size: 24px;
+        line-height: 36px;
+      }
     }
     ul {
       display: flex;
@@ -172,6 +241,12 @@
     }
     li {
       width: calc(25% - 18px);
+      @include desktop-s {
+        width: calc(50% - 18px);
+      }
+      @include pad {
+        width: 100%;
+      }
     }
     .card {
       box-shadow: 0px 2px 6px #00000029;
@@ -209,6 +284,14 @@
     background: $secondary;
     .container {
       max-width: 636px;
+      @include desktop-s {
+        margin: 0 auto;
+      }
+      @include pad {
+        margin: 0 auto;
+        padding-left: 14px;
+        padding-right: 14px;
+      }
     }
     h2 {
       text-align: center;
@@ -222,6 +305,10 @@
       font-size: 20px;
       line-height: 30px;
       margin-bottom: 24px;
+      @include desktop-s {
+        font-size: 16px;
+        line-height: 24px;
+      }
     }
     .field {
       display: flex;
@@ -258,7 +345,8 @@
         width: 20px;
         height: 20px;
       }
-      span {
+      label {
+        margin-top: 1px;
         margin-left: 4px;
         line-height: 24px;
       }
@@ -276,133 +364,6 @@
       cursor: pointer;
       &:hover {
         background: $primary2;
-      }
-    }
-  }
-}
-
-@media(max-width: 1199px){
-  .index {
-    .feature {
-      li {
-        width: calc(50% - 18px);
-      }
-    }
-
-    .classic {
-      li {
-        width: 100%;
-      }
-    }
-
-    .design {
-      ul {
-        gap: 24px;
-      }
-      li {
-        width: 100%;
-      }
-    }
-
-    .recommend {
-      li {
-        width: calc(50% - 18px);
-      }
-    }
-
-    .contact {
-      .container {
-        margin: 0 auto;
-      }
-      p {
-        font-size: 16px;
-        line-height: 24px;
-      }
-    }
-  }
-}
-
-@media(max-width: 767px){
-  .index {
-    .titleImg {
-      height: 396px;
-      .container {
-        height: 396px;
-      }
-      .title {
-        h3 {
-          font-size: 16px;
-          line-height: 24px;
-        }
-        h1 {
-          font-size: 24px;
-          line-height: 36px;
-        }
-      }
-    }
-
-    .feature {
-      padding: 40px 0;
-      h2 {
-        font-size: 24px;
-        line-height: 36px;
-      }
-      li {
-        width: 100%;
-      }
-    }
-
-    .classic {
-      padding: 40px 0;
-      h2 {
-        font-size: 24px;
-        line-height: 36px;
-      }
-    }
-
-    .design {
-      padding: 40px 0;
-      .container {
-        h2 {
-          font-size: 24px;
-          line-height: 36px;
-        }
-      }
-    }
-
-    .recommend {
-      padding: 40px 0;
-      h2 {
-        font-size: 24px;
-        line-height: 36px;
-      }
-      li {
-        width: 100%;
-      }
-    }
-
-    .contact {
-      .container {
-        margin: 0 auto;
-        padding-left: 14px;
-        padding-right: 14px;
-      }
-    }
-  }
-}
-
-@media(max-width: 374px) {
-  .index {
-    .feature {
-      h2 {
-        font-size: 20px;
-        line-height: 30px;
-      }
-    }
-    .classic {
-      h5 {
-        font-size: 36px;
-        line-height: 54px;
       }
     }
   }

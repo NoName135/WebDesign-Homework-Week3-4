@@ -1,11 +1,15 @@
 .header {
   background: $primary;
   color: #FFF;
-  font-family: $text-primary;
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include pad {
+      display: block;
+      margin-left: 0;
+      margin-right: 0;
+    }
   }
   .logo {
     width: 80px;
@@ -13,12 +17,25 @@
     padding-top: 12px;
     padding-bottom: 12px;
     margin-right: 64px;
+    @include pad {
+      margin-left: 14px;
+      margin-right: 14px;
+    }
   }
   ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: end;
     gap: 64px;
+    @include pad {
+      gap: 0;
+    }
+  }
+  li {
+    @include pad {
+      width: 50%;
+      text-align: center;
+    }
   }
   p{
     padding: 12px 0;
@@ -27,29 +44,7 @@
       padding-bottom: 9px;
       border-bottom: 3px solid #FFF;
     }
-  }
-}
-
-
-@media(max-width: 767px) {
-  .header {
-    .container {
-      display: block;
-      margin-left: 0;
-      margin-right: 0;
-    }
-    .logo {
-      margin-left: 14px;
-      margin-right: 14px;
-    }
-    ul {
-      gap: 0;
-    }
-    li {
-      width: 50%;
-      text-align: center;
-    }
-    p{
+    @include pad {
       border: 1px solid #FFF;
       &:hover {
         padding-bottom: 12px;

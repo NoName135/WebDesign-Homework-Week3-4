@@ -1,13 +1,12 @@
 .pagination {
   margin: 80px 0;
+  @include pad {
+    margin: 64px 0;
+  }
   ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    a.disabled {
-      pointer-events: none;
-      cursor: default;
-    }
     li {
       color: #555555;
       border: 1px solid #555555;
@@ -16,14 +15,32 @@
       font-size: 18px;
       line-height: 27px;
       white-space: nowrap;
+      cursor: pointer;
       &:hover {
         background: $secondary;
       }
+      @include pad {
+        font-size: 16px;
+        line-height: 24px;
+      }
+      @include phone {
+        display: none;
+      }
+    }
+    .disabled {
+      cursor: not-allowed;
     }
     .prev, .next {
       padding: 11px 12px;
       font-size: 19px;
       line-height: 29px;
+      @include pad {
+        font-size: 16px;
+        line-height: 26px;
+      }
+      @include phone {
+        display: block;
+      }
     }
     .next {
       background: #F2F2F2;
@@ -36,35 +53,6 @@
       color: #FFF;
       &:hover {
         background: #000;
-      }
-    }
-  }
-}
-
-@media(max-width: 767px){
-  .pagination {
-    margin: 64px 0;
-    ul {
-      li {
-        font-size: 16px;
-        line-height: 24px;
-      }
-      .prev, .next {
-        font-size: 16px;
-        line-height: 26px;
-      }
-    }
-  }
-}
-
-@media(max-width: 374px){
-  .pagination {
-    ul {
-      li {
-        display: none;
-      }
-      .prev, .next {
-        display: block;
       }
     }
   }

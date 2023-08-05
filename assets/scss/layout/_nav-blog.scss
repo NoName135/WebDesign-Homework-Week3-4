@@ -1,6 +1,5 @@
 .nav-blog {
   background: $primary2;
-  font-family: $text-primary;
   .container {
     display: flex;
     justify-content: space-between;
@@ -10,6 +9,17 @@
     display: flex;
     flex-wrap: wrap;
     gap: 48px;
+    @include pad {
+      width: 100%;
+      gap: 0;
+      justify-content: space-between;
+    }
+    li {
+      @include phone {
+        width: 50%;
+        text-align: center;
+      }
+    }
     p{
       font-weight: bold;
       font-size: 20px;
@@ -17,22 +27,7 @@
       padding-top: 12px;
       padding-bottom: 12px;
       color: #FFF;
-    }
-  }
-  .material-symbols-outlined {
-    font-size: 30px;
-    color: #FFF;
-    cursor: pointer;
-  }
-}
-
-@media (max-width: 767px) {
-  .nav-blog {
-    ul {
-      width: 100%;
-      gap: 0;
-      justify-content: space-between;
-      p{
+      @include pad {
         font-weight: bold;
         font-size: 16px;
         line-height: 24px;
@@ -41,17 +36,13 @@
         color: #FFF;
       }
     }
-    .material-symbols-outlined {
-      display: none;
-    }
   }
-}
-
-@media (max-width: 374px) {
-  .nav-blog {
-    li {
-      width: 50%;
-      text-align: center;
+  .material-symbols-outlined {
+    font-size: 30px;
+    color: #FFF;
+    cursor: pointer;
+    @include pad {
+      display: none;
     }
   }
 }

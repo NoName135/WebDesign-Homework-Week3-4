@@ -1,9 +1,17 @@
 .blog {
-  font-family: $text-primary;
   .breadcrumb {
     margin-top: 24px;
     display: flex;
     line-height: 24px;
+    @include desktop-s {
+      margin-top: 8px;
+    }
+    @include pad {
+      margin-top: 16px;
+    }
+    @include phone {
+      display: none;
+    }
     a {
       color: #000
     }
@@ -18,6 +26,10 @@
     font-weight: bold;
     font-family: $text-secondary;
     color: $primary;
+    @include pad {
+      font-size: 16px;
+      line-height: 24px;
+    }
     span {
       margin-right: 16px;
     }
@@ -29,15 +41,30 @@
   .content {
     width: calc(66.67% - 12px);
     margin-top: 8px;
+    @include desktop-s {
+      width: calc(75% - 12px);
+    }
+    @include pad {
+      width: 100%;
+      margin-bottom: 64px;
+    }
     h1 {
       font-size: 48px;
       line-height: 72px;
+      @include pad {
+        font-size: 24px;
+        line-height: 36px;
+      }
     }
     h2 {
       font-size: 24px;
       line-height: 36px;
       font-weight: 500;
       font-family: $text-secondary;
+      @include pad {
+        font-size: 16px;
+        line-height: 24px;
+      }
     }
     ul {
       margin-top: 16px;
@@ -49,6 +76,14 @@
         height: 520px;
         object-fit: cover;
         object-position: center center;
+        @include desktop-s {
+          width: 100%;
+          height: 312px;
+        }
+        @include pad {
+          width: 100%;
+          height: 208px;
+        }
       }
       p {
         margin-top: 8px;
@@ -58,6 +93,7 @@
     }
   }
   .share {
+    width: calc(66.67% - 12px);
     display: flex;
     align-items: center;
     gap: 16px;
@@ -74,6 +110,7 @@
     }
   }
   .pages {
+    width: calc(66.67% - 12px);
     margin-top: 24px;
     margin-bottom: 80px;
     display: flex;
@@ -86,12 +123,26 @@
       gap: 12px;
     }
   }
+  .share, .pages {
+    @include desktop-s {
+      width: 100%;
+    }
+    @include pad {
+      display: none;
+    }
+  }
   .tags {
     width: calc(25% - 12px);
     font-weight: bold;
     font-family: $text-secondary;
     color: $primary;
-    h4 {
+    @include desktop-s {
+      width: 33.33%;
+    }
+    @include pad {
+      display: none;
+    }
+    h3 {
       display: flex;
       align-items: center;
       font-size: 32px;
@@ -102,35 +153,8 @@
         margin-right: 12px;
       }
     }
-    p {
-      margin-top: 4px;
-    }
-    span {
-      margin-top: 4px;
-      margin-right: 24px;
-      font-size: 24px;
-      line-height: 36px;
-    }
-  }
-}
-
-@media (max-width: 1199px) {
-  .blog {
-    .breadcrumb {
-      margin-top: 8px;
-    }
-    .content {
-      width: calc(75% - 12px);
-      ul {
-        img {
-          width: 100%;
-          height: 312px;
-        }
-      }
-    }
-    .tags {
-      width: 33.33%;
-      h4 {
+    h4 {
+      @include desktop-s {
         font-size: 16px;
         line-height: 24px;
         .material-symbols-outlined {
@@ -138,59 +162,24 @@
           margin-right: 0;
         }
       }
-      p {
+    }
+    p {
+      margin-top: 4px;
+      @include desktop-s {
         margin-top: 8px;
       }
-      span {
+    }
+    span {
+      margin-top: 4px;
+      margin-right: 24px;
+      font-size: 24px;
+      line-height: 36px;
+      @include desktop-s {
         margin-top: 0;
         margin-right: 16px;
         font-size: 16px;
         line-height: 24px;
       }
-    }
-  }
-}
-
-@media (max-width: 767px) {
-  .blog {
-    .breadcrumb {
-      margin-top: 16px;
-    }
-    .tag {
-      font-size: 16px;
-      line-height: 24px;
-    }
-    .content {
-      width: 100%;
-      margin-bottom: 64px;
-      h1 {
-        font-size: 24px;
-        line-height: 36px;
-      }
-      h2 {
-        font-size: 16px;
-        line-height: 24px;
-      }
-      ul {
-        img {
-          width: 100%;
-          height: 208px;
-        }
-      }
-      .share, .pages {
-        display: none;
-      }
-    }
-    .tags {
-      display: none;
-    }
-  }
-}
-
-@media (max-width: 374px) {
-  .blog {
-    .breadcrumb {
-      display: none;
     }
   }
 }

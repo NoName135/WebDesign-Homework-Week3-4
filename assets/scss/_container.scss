@@ -1,17 +1,11 @@
 .container {
   max-width: 1296px;
   margin: 0 auto;
-}
-
-@media (max-width: 1199px) {
-  .container {
+  @include desktop-s {
     margin-left: 36px;
     margin-right: 36px;
   }
-}
-
-@media(max-width: 767px){
-  .container {
+  @include pad {
     margin-left: 14px;
     margin-right: 14px;
   }

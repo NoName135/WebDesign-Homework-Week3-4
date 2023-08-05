@@ -1,5 +1,15 @@
 .product {
   .menu {
+    .container {
+      @include desktop-s {
+        margin-left: 0;
+        margin-right: 0;
+      }
+      @include pad {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
     ul {
       display: flex;
       a {
@@ -17,10 +27,27 @@
         &:hover {
           background: $secondary;
         }
+        @include desktop-s {
+          font-size: 24px;
+          line-height: 36px;
+          padding: 16px 0;
+        }
+        @include pad {
+          font-size: 16px;
+          line-height: 24px;
+          padding: 16px 0;
+        }
+        @include phone {
+          font-size: 12px;
+          line-height: 20px;
+        }
       }
       .active {
         padding-bottom: 16px;
         border-bottom: 8px solid $primary;
+        @include desktop-s {
+          padding-bottom: 8px;
+        }
       }
     }
     .header {
@@ -31,45 +58,80 @@
         height: 296px;
         background-size: cover;
         background-position: center center;
+        @include desktop-s {
+          height: 136px;
+        }
       }
       .headerImg1 {
         background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-1.png?raw=true');
+        @include desktop-s {
+          background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-sm-1.png?raw=true');
+        }
       }
       .headerImg2 {
         background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-2.png?raw=true');
+        @include desktop-s {
+          background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-sm-2.png?raw=true');
+        }
       }
       .headerImg3 {
         background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-3.png?raw=true');
+        @include desktop-s {
+          background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-sm-3.png?raw=true');
+        }
       }
       .headerImg4 {
         background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-4.png?raw=true');
+        @include desktop-s {
+          background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-sm-4.png?raw=true');
+        }
       }
     }
   }
   main {
     padding-top: 80px;
     text-align: center;
+    @include pad {
+      padding-top: 40px;
+    }
     h2 {
       font-size: 42px;
       line-height: 63px;
       font-family: $text-secondary;
       font-weight: 500;
+      @include pad {
+        font-size: 24px;
+        line-height: 36px;
+      }
     }
     h1 {
       font-size: 32px;
       line-height: 48px;
       font-family: $text-primary;
       margin-bottom: 32px;
+      @include pad {
+        font-size: 24px;
+        line-height: 36px;
+        margin-bottom: 24px;
+      }
     }
     .card-optical, .card-sunglasses {
       display: flex;
       flex-wrap: wrap;
       gap: 24px;
-    }
-    .card {
-      margin-bottom: 56px;
-      img {
-        width: 100%;
+      .card {
+        margin-bottom: 56px;
+        @include desktop-s {
+          width: calc(50% - 12px);
+          margin-bottom: 16px;
+        }
+        @include pad {
+            width: 100%;
+            margin-bottom: 0;
+          }
+        img {
+          width: 100%;
+        }
       }
     }
     .card-body {
@@ -109,100 +171,6 @@
   .card-sunglasses {
     .card {
       width: calc(33.33% - 16px);
-    }
-  }
-}
-
-
-@media(max-width: 1199px){
-  .product {
-    .menu {
-      .container {
-        margin-left: 0;
-        margin-right: 0;
-        li {
-          font-size: 24px;
-          line-height: 36px;
-          padding: 16px 0;
-        }
-        .active {
-          padding-bottom: 8px;
-        }
-      }
-      .header {
-        .headerImg1, .headerImg2, .headerImg3, .headerImg4 {
-          height: 136px;
-        }
-        .headerImg1 {
-          background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-sm-1.png?raw=true');
-        }
-        .headerImg2 {
-          background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-sm-2.png?raw=true');
-        }
-        .headerIm3 {
-          background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-sm-3.png?raw=true');
-        }
-        .headerImg4 {
-          background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-sm-4.png?raw=true');
-        }
-      }
-    }
-    main {
-      .card-optical, .card-sunglasses {
-        .card {
-          width: calc(50% - 12px);
-          margin-bottom: 16px;
-        }
-      }
-    }
-  }
-}
-
-@media(max-width: 767px){
-  .product {
-    .menu {
-      .container {
-        margin-left: 0;
-        margin-right: 0;
-        li {
-          font-size: 16px;
-          line-height: 24px;
-          padding: 16px 0;
-        }
-      }
-    }
-    main {
-      padding-top: 40px;
-      h2 {
-        font-size: 24px;
-        line-height: 36px;
-      }
-      h1 {
-        font-size: 24px;
-        line-height: 36px;
-        margin-bottom: 24px;
-      }
-      .card-optical, .card-sunglasses {
-        .card {
-          width: 100%;
-          margin-bottom: 0;
-        }
-      }
-    }
-  }
-}
-
-
-
-@media(max-width: 374px){
-  .product {
-    .menu {
-      .container{
-        li {
-          font-size: 12px;
-          line-height: 20px;
-        }
-      }
     }
   }
 }
